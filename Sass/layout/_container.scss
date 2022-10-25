@@ -1,1 +1,10 @@
 @use "../util/index2" as *;
+
+.container {
+  width: rem(305);
+  margin: rem(54) auto 0;
+  @include breakpoint(large) {
+    width: rem(1110);
+    margin: rem(113) auto 0;
+  }
+}

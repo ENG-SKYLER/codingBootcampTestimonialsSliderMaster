@@ -1,0 +1,62 @@
+@use "../util/index2" as *;
+
+.slider {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  @include breakpoint(large) {
+    grid-template-columns: 630px auto;
+    grid-template-rows: auto;
+  }
+}
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: rem(254);
+  width: rem(254);
+  place-self: center;
+  @include breakpoint(large) {
+    order: 1;
+    height: rem(540);
+    width: rem(540);
+    position: relative;
+  }
+  > img {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: opacity transform 1s;
+    &.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    position: absolute;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 1px 4px 25px -1px black;
+  }
+}
+.select-btn {
+  position: absolute;
+  height: 40px;
+  width: 80px;
+  border: none;
+  background-color: white;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  bottom: -20px;
+  left: 85px;
+  @include breakpoint(large) {
+  }
+  img {
+    width: 9px;
+    height: 14px;
+    &:active {
+      box-shadow: inset 5px 5px 10px -3px rgb(0 0 0 / 70%);
+    }
+  }
+}
