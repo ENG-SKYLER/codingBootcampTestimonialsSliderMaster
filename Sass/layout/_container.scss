@@ -1,7 +1,7 @@
 @use "../util/index2" as *;
 
 .container {
-  width: rem(305);
+  width: 81.3%;
   margin: rem(54) auto 0;
   @include breakpoint(large) {
     width: rem(1110);
