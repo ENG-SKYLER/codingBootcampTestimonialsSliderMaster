@@ -15,14 +15,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: rem(254);
   width: rem(254);
+  height: rem(254);
   place-self: center;
   @include breakpoint(large) {
     order: 1;
-    height: rem(540);
-    width: rem(540);
     position: relative;
+    width: rem(540);
+    height: rem(540);
   }
   > img {
     transform: translateX(-100px);
@@ -34,8 +34,8 @@
     }
     position: absolute;
     height: 100%;
-    border-radius: 5px;
-    box-shadow: 1px 4px 25px -1px black;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px hsl(240deg 38% 20% / 30%);
   }
 }
 .select-btn {
@@ -51,12 +51,58 @@
   bottom: -20px;
   left: 85px;
   @include breakpoint(large) {
+    height: 56px;
+    width: 112px;
+    bottom: -28px;
   }
   img {
     width: 9px;
     height: 14px;
     &:active {
       box-shadow: inset 5px 5px 10px -3px rgb(0 0 0 / 70%);
+    }
+  }
+}
+.info {
+  p {
+    margin-top: 60px;
+    line-height: 1.5;
+    font-weight: 300;
+    text-align: center;
+    font-size: 18px;
+    @include breakpoint(large) {
+      font-size: 32px;
+      width: 630px;
+      text-align: left;
+    }
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(large) {
+      flex-direction: row;
+    }
+    h1 {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 0;
+      margin-top: 28px;
+      @include breakpoint(large) {
+        text-align: left;
+        margin-top: 0;
+      }
+    }
+    h2 {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      color: $gray;
+      margin-top: 4px;
+      @include breakpoint(large) {
+        text-align: left;
+        display: inline;
+        margin: 0;
+      }
     }
   }
 }
