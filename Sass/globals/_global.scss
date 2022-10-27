@@ -1,6 +1,7 @@
 @use "../util/index2" as *;
 
 body {
+  font-family: "Inter", sans-serif;
   height: calc(100vh - 54px);
   @include breakpoint(large) {
     height: calc(100vh - 113px);
