@@ -376,8 +376,6 @@ body {
 .image-container .pattern1 {
   position: absolute;
   z-index: -1;
-  right: -80px;
-  top: -61px;
 }
 .image-container .pattern1 img {
   height: 308px;
@@ -387,6 +385,12 @@ body {
   .image-container .pattern1 img {
     width: 697px;
     height: 657px;
+  }
+}
+@media (min-width: 50em) {
+  .image-container .pattern1 {
+    right: -80px;
+    top: -61px;
   }
 }
 
@@ -413,6 +417,7 @@ body {
     height: 56px;
     width: 112px;
     bottom: -28px;
+    left: 110px;
   }
 }
 .select-btn img {

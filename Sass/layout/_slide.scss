@@ -40,8 +40,7 @@
   .pattern1 {
     position: absolute;
     z-index: -1;
-    right: -80px;
-    top: -61px;
+
     img {
       height: 308px;
       width: 327px;
@@ -49,6 +48,10 @@
         width: 697px;
         height: 657px;
       }
+    }
+    @include breakpoint(large) {
+      right: -80px;
+      top: -61px;
     }
   }
 }
@@ -68,6 +71,7 @@
     height: 56px;
     width: 112px;
     bottom: -28px;
+    left: 110px;
   }
   img {
     width: 9px;
